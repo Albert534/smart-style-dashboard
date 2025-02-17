@@ -1,17 +1,16 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Space, Button } from 'antd';
+import logo from '../../assets/smartstyle.png';
 import './QR.css';
-import { QRCode, Space } from 'antd';
-const QR = () => {
-	const [text] = React.useState('https://ant.design/components/qr-code');
 
+const QR = () => {
 	const navigate = useNavigate();
+
 	useEffect(() => {
 		const storedExpire = localStorage.getItem('expire');
 		const storedToken = localStorage.getItem('access_token');
 
-		// Ensure expire is a valid number
 		const expireTime = storedExpire ? parseInt(storedExpire, 10) : NaN;
 		const currentTime = Math.floor(Date.now() / 1000);
 
@@ -26,13 +25,44 @@ const QR = () => {
 			navigate('/login');
 		}
 	}, [navigate]);
+
 	return (
-		<div>
+		<div className='main'>
+			<img
+				src={logo}
+				alt='Logo'
+				className='downimg'
+			/>
+			<div
+				className='name'
+				style={{ marginBottom: 12 }}
+			></div>
 			<Space
 				direction='vertical'
 				align='center'
+				size='large'
 			>
-				<QRCode value={text || '-'} />
+				<div
+					className='name'
+					style={{ marginBottom: 12 }}
+				>
+					A place for your fashion , A place for your style 😎😎
+				</div>
+				<Button
+					type='primary'
+					href='../../../app-release.apk'
+					download='SmartStyleApp.apk'
+					className='download-button'
+				>
+					Download APK
+				</Button>
+
+				<div
+					className='name'
+					style={{ marginBottom: 12 }}
+				>
+					Download your app in mobile!!!
+				</div>
 			</Space>
 		</div>
 	);

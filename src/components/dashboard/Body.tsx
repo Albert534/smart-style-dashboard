@@ -1,5 +1,5 @@
 import Header from './Header';
-import { Shirt, icons } from 'lucide';
+
 import {
 	SkinOutlined,
 	SmileOutlined,

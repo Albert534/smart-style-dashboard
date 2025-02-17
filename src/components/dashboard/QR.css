@@ -1,0 +1,36 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #f4f4f9;
+	padding: 20px;
+}
+
+.downimg {
+	width: 150px;
+	margin-bottom: 20px;
+}
+
+.download-button {
+	background-color: #a31d1d;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+	/* Add these lines */
+	color: white;
+	text-decoration: none;
+}
+
+.download-button:hover {
+	background-color: #6d2323;
+}
+
+.ant-space-imte .ant-btn:hover {
+	background-color: #6d2323;
+}
