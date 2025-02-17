@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.css'; // Import the CSS file
+import './header.css'; // Import the CSS file
 
 type SampleDataItem = {
 	title: string;
