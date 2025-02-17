@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-layout-sider-children {
+	margin: 0;
+	padding: 0;
+	background-color: #e5d0ac;
+}
+
+.ant-menu {
+	background-color: #e5d0ac;
+	gap: 14px;
+}
+
+.ant-layout-contentcss-dev-only-do-not-override-1yacf91 {
+	margin: 0;
+}
+.ant-layout {
+	margin: 0;
+	padding: 0;
+	background-color: #fef9e1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.ant-layout-sider {
+	background-color: #a31d1d !important;
+	color: #a31d1d !important;
+}
+
+.ant-layout-sider-trigger {
+	background-color: #a31d1d !important;
+	color: #ffffff !important;
+}
+
+.ant-menu-item-icon {
+	color: #a31d1d !important;
+}
+
+.ant-menu-item-icon {
+	.anticon {
+		color: #a31d1d !important;
+		width: 40px;
+		height: 50px;
+	}
+}
+
+.ant-menu-item-selected {
+	background-color: #a31d1d !important;
+	color: #ffffff !important;
+	opacity: 0.1;
+}
+
+.ant-menu-item-selected {
+	background-color: #a31d1d !important;
+	color: #ffffff !important;
+	opacity: 0.7;
+}
+
+.ant-menu-item-selected .ant-menu-item-icon {
+	color: #ffffff !important;
+	opacity: 1;
+}
+
+.ant-menu-submenu-title {
+	.anticon {
+		size: 20px;
+		color: #a31d1d !important;
+	}
+}
+
+/* Target the first breadcrumb link */
+.ant-breadcrumb-link:nth-of-type(1) {
+	color: #a31d1d !important;
+	font-weight: bold;
+}
+
+.ant-modal-footer .ant-btn:nth-last-child(1) {
+	background-color: #a31d1d;
+}
+
+.ant-modal-footer .ant-btn:nth-last-child(1):hover {
+	background-color: #6d2323;
+}
+
+:root {
+	--desktop: 1024px;
+	--tablet: 768px;
+	--mobile: 600px;
+}
+:root {
+	--global-font: 'Inter', sans-serif;
+}
+
+body {
+	font-family: var(--global-font);
+}
+/* Assuming --mobile is defined somewhere else in your CSS, like in a :root selector */
+:root {
+	--mobile: 768px; /* You can change this as per your requirement */
+}
+
+@media (max-width: var(--mobile)) {
+	/* Disable the collapse button on small screens */
+	.ant-layout-sider .ant-layout-sider-trigger {
+		pointer-events: none; /* Prevent clicks */
+		opacity: 0.5; /* Optional: Dim the button to show it's disabled */
+	}
+}

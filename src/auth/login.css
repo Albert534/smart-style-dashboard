@@ -1,0 +1,16 @@
+.text-button {
+	margin-top: 10px;
+}
+
+.ant-form-item-control-input-content input:focus {
+	border-color: #a31d1d !important; /* Change border color on focus */
+	box-shadow: 0 0 5px rgba(163, 29, 29, 0.5) !important; /* Add shadow */
+}
+
+.ant-form-item-control-input-content input:hover {
+	border-color: #d24d4d !important; /* Change border color on hover */
+}
+
+.ant-input:active {
+	border-color: #a31d1d !important; /* Change border color on click */
+}

@@ -1,0 +1,91 @@
+/* Container for the entire header */
+.header-container {
+	padding: 20px;
+}
+
+/* Grid layout for the cards */
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* 1 column by default */
+	gap: 32px;
+}
+
+@media (min-width: 576px) {
+	.card-grid {
+		grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+	}
+}
+
+@media (min-width: 768px) {
+	.card-grid {
+		grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+	}
+}
+
+@media (min-width: 1024px) {
+	.card-grid {
+		grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+	}
+}
+
+/* Card styles */
+.card {
+	cursor: pointer;
+	padding: 16px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+	height: 100px;
+	width: '100%';
+}
+
+.card.selected {
+	background-color: #a31d1d;
+	color: white;
+}
+
+/* Content inside each card */
+.card-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.card-title {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.card-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-number {
+	font-weight: bold;
+}
+
+.card-description {
+	font-size: 12px;
+	text-align: right;
+	color: #a31d1d;
+}
+
+.card-icon {
+	font-size: 13px;
+	color: #a31d1d;
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+}
+
+.card.selected .card-title,
+.card.selected .card-info,
+.card.selected .card-description,
+.card.selected .card-number,
+.card.selected .card-icon {
+	color: white;
+}
